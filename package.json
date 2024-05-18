@@ -6,12 +6,17 @@
   "scripts": {
     "dev:0x": "DEV=true NODE_OPTIONS=\"--import tsx/esm\" node ./apm/tool-0x/index.ts",
     "test:0x": "NODE_ENV=production 0x -P 'autocannon http://localhost:3000/' ./apm/tool-0x/app.js",
-    "test:memory-leak": "./apm/memory-leak/run.sh -f ./apm/memory-leak/index.js -m cache -d 20"
+    "test:memory-leak": "./apm/memory-leak/run.sh -f ./apm/memory-leak/index.js -m cache -d 20",
+    "test:grafana": "node ./apm/grafana/index.js",
+    "test:aliapm": "NODE_LOG_DIR=/tmp ENABLE_NODE_LOG=YES node ./apm/alinode/test.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "koa": "^2.15.3",
+    "express-statsd": "^0.3.0",
+    "express": "^4.17.1",
     "restify": "^8.5.1",
     "fastify": "^4.27.0"
   },
