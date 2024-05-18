@@ -1,0 +1,24 @@
+{
+  "name": "node-available",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:0x": "DEV=true NODE_OPTIONS=\"--import tsx/esm\" node ./apm/tool-0x/index.ts",
+    "test:0x": "NODE_ENV=production 0x -P 'autocannon http://localhost:3000/' ./apm/tool-0x/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "restify": "^8.5.1",
+    "fastify": "^4.27.0"
+  },
+  "devDependencies": {
+    "0x": "^4.10.2",
+    "autocannon": "^7.15.0",
+    "@types/node": "^20.12.12",
+    "tsx": "^4.10.4",
+    "typescript": "^5.4.5"
+  }
+}
