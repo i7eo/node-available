@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev:0x": "DEV=true NODE_OPTIONS=\"--import tsx/esm\" node ./apm/tool-0x/index.ts",
-    "test:0x": "NODE_ENV=production 0x -P 'autocannon http://localhost:3000/' ./apm/tool-0x/app.js"
+    "test:0x": "NODE_ENV=production 0x -P 'autocannon http://localhost:3000/' ./apm/tool-0x/app.js",
+    "test:memory-leak": "./apm/memory-leak/run.sh -f ./apm/memory-leak/index.js -m cache -d 20"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +18,7 @@
   "devDependencies": {
     "0x": "^4.10.2",
     "autocannon": "^7.15.0",
+    "clinic": "^9.0.0",
     "@types/node": "^20.12.12",
     "tsx": "^4.10.4",
     "typescript": "^5.4.5"
