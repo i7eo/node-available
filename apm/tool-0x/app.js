@@ -7,7 +7,7 @@ function a() {
     for (let i = 0; i < 1e8; i++) { }
 }
 function b() {
-    for (let i = 0; i < 1e8; i++) { }
+    for (let i = 0; i < 2e8; i++) { }
 }
 server.get("/", function handle(req, res, next) {
     a();
