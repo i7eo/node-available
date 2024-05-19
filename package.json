@@ -8,7 +8,8 @@
     "test:0x": "NODE_ENV=production 0x -P 'autocannon http://localhost:3000/' ./apm/tool-0x/app.js",
     "test:memory-leak": "./apm/memory-leak/run.sh -f ./apm/memory-leak/index.js -m cache -d 20",
     "test:grafana": "node ./apm/grafana/index.js",
-    "test:aliapm": "NODE_LOG_DIR=/tmp ENABLE_NODE_LOG=YES node ./apm/alinode/test.js"
+    "test:aliapm": "NODE_LOG_DIR=/tmp ENABLE_NODE_LOG=YES node ./apm/alinode/test.js",
+    "test:exit": "node ./graceful/exit/index.js"
   },
   "keywords": [],
   "author": "",
